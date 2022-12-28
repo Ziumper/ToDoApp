@@ -40,7 +40,7 @@ namespace ToDoApp.Tests
             database.Save(todoItems);
             IEnumerable<TodoItem> loadedItems = database.Load();
 
-            Assert.Equal(loadedItems.Count(),todoItems.Count());
+            Assert.Equal(loadedItems.Count(),todoItems.Count);
         }
 
         [Fact]

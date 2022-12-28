@@ -57,8 +57,16 @@ namespace ToDoApp.Wpf.Services
             {
                 if (string.IsNullOrEmpty(dataPath))
                 {
-                    string assemblyPath = AppContext.BaseDirectory;
-                    string path = assemblyPath;
+                    string assembly = Assembly.GetExecutingAssembly().Location;
+                    string fullPath = Path.GetFullPath(assembly);
+                    string? directory = Path.GetDirectoryName(fullPath) + Path.DirectorySeparatorChar;
+                    if(string.IsNullOrEmpty(directory))
+                    {
+                        string saveInCurrent = "." + Path.DirectorySeparatorChar;
+                        directory = saveInCurrent;
+                    }
+
+                    string path = directory;
                     path += "ToDoList.json";
                     return path;
                 }
