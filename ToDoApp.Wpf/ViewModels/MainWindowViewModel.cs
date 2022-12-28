@@ -10,10 +10,12 @@ namespace ToDoApp.Wpf.ViewModels
     public class MainWindowViewModel : ViewModelBase
     {
         private ViewModelBase? content;
+        private Database database;
 
-        public MainWindowViewModel(Database db)
+        public MainWindowViewModel(Database database)
         {
-            Content = List = new TodoListViewModel(db.GetItems());
+            this.database = database;
+            Content = List = new TodoListViewModel(database.GetItems());
         }
 
         public ViewModelBase? Content
@@ -22,7 +24,7 @@ namespace ToDoApp.Wpf.ViewModels
             private set => this.RaiseAndSetIfChanged(ref content, value);
         }
 
-        public TodoListViewModel List { get; }
+        public TodoListViewModel List { get; private set; }
 
         public void AddItem()
         {
@@ -43,6 +45,12 @@ namespace ToDoApp.Wpf.ViewModels
               });
 
             Content = vm;
+        }
+
+        public void DeleteAll()
+        {
+            database.DeleteAll();
+            Content = List = new TodoListViewModel(database.GetItems());
         }
     }
 }

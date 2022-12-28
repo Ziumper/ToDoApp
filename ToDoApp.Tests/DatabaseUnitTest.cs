@@ -42,5 +42,30 @@ namespace ToDoApp.Tests
 
             Assert.Equal(loadedItems.Count(),todoItems.Count());
         }
+
+        [Fact]
+        public void DeletedAllTodoItemsAfterSaving()
+        {
+
+            Database database = new();
+            IEnumerable<TodoItem> items = database.GetItems();
+
+            List<TodoItem> todoItems = items.ToList();
+            TodoItem item = new()
+            {
+                Description = "description",
+                IsChecked = true,
+            };
+
+            todoItems.Add(item);
+            database.Save(todoItems);
+            database.DeleteAll();
+
+            IEnumerable<TodoItem> loadedItems = database.Load();
+            Assert.Empty(loadedItems);
+        }
+
+
+       
     }
 }

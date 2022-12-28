@@ -44,6 +44,11 @@ namespace ToDoApp.Wpf.Services
             return result;
         }
 
+        public void DeleteAll()
+        {
+            if(File.Exists(dataPath)) File.Delete(dataPath);
+        }
+
         public IEnumerable<TodoItem> GetItems() => Load();
         
         public string DataPath
