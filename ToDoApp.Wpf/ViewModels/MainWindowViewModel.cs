@@ -26,7 +26,7 @@ namespace ToDoApp.Wpf.ViewModels
 
         public void AddItem()
         {
-            AddItemViewModel vm = new AddItemViewModel();
+            AddItemViewModel vm = new ();
 
             _ = Observable.Merge(
               vm.Ok,

@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToDoApp.Wpf", "ToDoApp.Wpf\
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "ToDoApp.Installer", "ToDoApp.Installer\ToDoApp.Installer.vdproj", "{939BFF29-E175-47BC-8389-5F769D78F08B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToDoApp.Tests", "ToDoApp.Tests\ToDoApp.Tests.csproj", "{FF8F6040-AE12-423A-9719-F4F9A8C61F69}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,10 @@ Global
 		{A89D7556-84D9-4B27-9756-75E4AD1D205B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{939BFF29-E175-47BC-8389-5F769D78F08B}.Debug|Any CPU.ActiveCfg = Debug
 		{939BFF29-E175-47BC-8389-5F769D78F08B}.Release|Any CPU.ActiveCfg = Release
+		{FF8F6040-AE12-423A-9719-F4F9A8C61F69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF8F6040-AE12-423A-9719-F4F9A8C61F69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF8F6040-AE12-423A-9719-F4F9A8C61F69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF8F6040-AE12-423A-9719-F4F9A8C61F69}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
