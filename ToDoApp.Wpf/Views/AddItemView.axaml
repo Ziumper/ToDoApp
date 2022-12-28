@@ -5,10 +5,24 @@
              mc:Ignorable="d" d:DesignWidth="200" d:DesignHeight="300"
              x:Class="ToDoApp.Wpf.Views.AddItemView">
 	<DockPanel>
-		<Button DockPanel.Dock="Bottom" Command="{Binding Cancel}">Cancel</Button>
-		<Button DockPanel.Dock="Bottom" Command="{Binding Ok}">OK</Button>
-		<TextBox AcceptsReturn="True"
+		<Button DockPanel.Dock="Bottom"
+				HorizontalAlignment="Stretch"
+				Command="{Binding Cancel}"
+				HorizontalContentAlignment="Center">
+			Cancel
+		</Button>
+		<Button DockPanel.Dock="Bottom"
+				HorizontalAlignment="Stretch"
+				HorizontalContentAlignment="Center"
+				Command="{Binding Ok}">
+			Ok
+		</Button>
+		<ScrollViewer>
+			<TextBox
+				 TextWrapping="Wrap"
+				 AcceptsReturn="True"
 				 Text="{Binding Description}"
-				 Watermark="Enter your TODO"/>
+				 Watermark="Enter your TODO" />
+		</ScrollViewer>
 	</DockPanel>
 </UserControl>

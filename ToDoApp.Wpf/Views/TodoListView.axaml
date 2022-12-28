@@ -4,20 +4,24 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="200" d:DesignHeight="400"
              x:Class="ToDoApp.Wpf.Views.TodoListView">
-  <DockPanel>
-	  <Button DockPanel.Dock="Bottom"
-			  HorizontalAlignment="Center"
-			  Command="{Binding $parent[Window].DataContext.AddItem}" >
-		  Add an item
-	  </Button>
-	  <ItemsControl Items="{Binding Items}">
-		  <ItemsControl.ItemTemplate>
-			  <DataTemplate>
-				  <CheckBox Margin="4"
-							IsChecked="{Binding IsChecked}"
-							Content="{Binding Description}"/>
-			  </DataTemplate>
-		  </ItemsControl.ItemTemplate>
-	  </ItemsControl>
-  </DockPanel>
+	<DockPanel>
+		<Button DockPanel.Dock="Bottom"
+				HorizontalAlignment="Center"
+				Command="{Binding $parent[Window].DataContext.AddItem}">
+			Add an item
+		</Button>
+		<ItemsControl Items="{Binding Items}">
+			<ItemsControl.ItemTemplate>
+				<DataTemplate>
+					<CheckBox Margin="4"
+							  IsChecked="{Binding IsChecked}">
+						<TextBlock
+							Text="{Binding Description}"
+							TextWrapping="Wrap">
+						</TextBlock>
+					</CheckBox>
+				</DataTemplate>
+			</ItemsControl.ItemTemplate>
+		</ItemsControl>
+	</DockPanel>
 </UserControl>
