@@ -1,6 +1,7 @@
 using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
+using System;
 using ToDoApp.Wpf.Services;
 using ToDoApp.Wpf.ViewModels;
 using ToDoApp.Wpf.Views;
@@ -23,9 +24,26 @@ namespace ToDoApp.Wpf
                 {
                     DataContext = new MainWindowViewModel(database),
                 };
+
+                desktop.Exit += OnExit;
             }
 
             base.OnFrameworkInitializationCompleted();
         }
+
+        private void OnExit(object? sender, ControlledApplicationLifetimeExitEventArgs e)
+        {
+            if(sender is not IClassicDesktopStyleApplicationLifetime desktop)
+            {
+                return;
+            }
+
+            if (desktop.MainWindow == null) return;
+
+            if (desktop.MainWindow.DataContext is not MainWindowViewModel viewModel) return;
+
+            Database database = new Database();
+            database.Save(viewModel.List.Items);
+         }
     }
 }
