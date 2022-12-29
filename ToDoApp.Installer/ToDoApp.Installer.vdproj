@@ -15,13 +15,19 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_4110473F049D40B3AD30C195121116B1"
+        "MsmKey" = "8:_52CD0BAB9BF8465BB4D2F73C71A243BA"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_52CD0BAB9BF8465BB4D2F73C71A243BA"
+        "MsmKey" = "8:_56F4B98C41C041228506ACED6E0FD9C9"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_E14EAE86227449A9A13F83EEE791CAC5"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -43,6 +49,22 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
+            }
         }
         "Release"
         {
@@ -59,6 +81,22 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
+            }
         }
     }
     "Deployable"
@@ -90,7 +128,27 @@
         }
         "File"
         {
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4110473F049D40B3AD30C195121116B1"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_56F4B98C41C041228506ACED6E0FD9C9"
+            {
+            "SourcePath" = "8:..\\ToDoApp.Wpf\\Assets\\to-do.ico"
+            "TargetName" = "8:to-do.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_0316BBA59A1C4C23BFC3EA31A78CE913"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E14EAE86227449A9A13F83EEE791CAC5"
             {
             "SourcePath" = "8:..\\ToDoApp.Wpf\\Assets\\avalonia-logo.ico"
             "TargetName" = "8:avalonia-logo.ico"
@@ -166,15 +224,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:ToDoApp"
-        "ProductCode" = "8:{EBECC657-DDE3-4BF3-BD51-43883D0FA857}"
-        "PackageCode" = "8:{9F02EAF4-25C7-467F-B715-F2541E4C0EA4}"
+        "ProductCode" = "8:{E84FF81A-F643-47E3-A63E-0BBBC6364561}"
+        "PackageCode" = "8:{62C60A46-8FD0-47EC-B2C0-E405CFE32731}"
         "UpgradeCode" = "8:{928988EF-0B8D-4FB7-BEC5-5EE2B3D47937}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
-        "RemovePreviousVersions" = "11:FALSE"
+        "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.0.0"
+        "ProductVersion" = "8:1.0.1"
         "Manufacturer" = "8:Ziumper"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
@@ -287,7 +345,7 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_CBB1BF4D3AB9463591F45B9938825386"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_1BB82FB4A5734CAA9CA732C20B1CECC6"
             {
             "Name" = "8:ToDoApp"
             "Arguments" = "8:"
@@ -298,24 +356,10 @@
             "Target" = "8:_52CD0BAB9BF8465BB4D2F73C71A243BA"
             "Folder" = "8:_F4F806ECB74042098CB2695305A7B45D"
             "WorkingFolder" = "8:_0316BBA59A1C4C23BFC3EA31A78CE913"
-            "Icon" = "8:_4110473F049D40B3AD30C195121116B1"
+            "Icon" = "8:_56F4B98C41C041228506ACED6E0FD9C9"
             "Feature" = "8:"
             }
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_D8FB399052E647F79D5FF200B5DF4209"
-            {
-            "Name" = "8:ToDoApp"
-            "Arguments" = "8:"
-            "Description" = "8:"
-            "ShowCmd" = "3:1"
-            "IconIndex" = "3:0"
-            "Transitive" = "11:FALSE"
-            "Target" = "8:_52CD0BAB9BF8465BB4D2F73C71A243BA"
-            "Folder" = "8:_0316BBA59A1C4C23BFC3EA31A78CE913"
-            "WorkingFolder" = "8:_0316BBA59A1C4C23BFC3EA31A78CE913"
-            "Icon" = "8:_4110473F049D40B3AD30C195121116B1"
-            "Feature" = "8:"
-            }
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_DCCF9645E3194B4BBA7058457E7E209A"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_463414EA66D94262BD7D3A05D8C75911"
             {
             "Name" = "8:ToDoApp"
             "Arguments" = "8:"
@@ -326,7 +370,21 @@
             "Target" = "8:_52CD0BAB9BF8465BB4D2F73C71A243BA"
             "Folder" = "8:_9D352334BA7B43C0B9E6EB7B3CFB1E20"
             "WorkingFolder" = "8:_0316BBA59A1C4C23BFC3EA31A78CE913"
-            "Icon" = "8:_4110473F049D40B3AD30C195121116B1"
+            "Icon" = "8:_56F4B98C41C041228506ACED6E0FD9C9"
+            "Feature" = "8:"
+            }
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_BFD426E927464F4CA961733791A5EFF0"
+            {
+            "Name" = "8:ToDoApp"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_52CD0BAB9BF8465BB4D2F73C71A243BA"
+            "Folder" = "8:_0316BBA59A1C4C23BFC3EA31A78CE913"
+            "WorkingFolder" = "8:_0316BBA59A1C4C23BFC3EA31A78CE913"
+            "Icon" = "8:_56F4B98C41C041228506ACED6E0FD9C9"
             "Feature" = "8:"
             }
         }
@@ -730,7 +788,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_52CD0BAB9BF8465BB4D2F73C71A243BA"
             {
-            "SourcePath" = "8:..\\ToDoApp.Wpf\\obj\\Debug\\net7.0\\apphost.exe"
+            "SourcePath" = "8:..\\ToDoApp.Wpf\\obj\\Release\\net7.0\\apphost.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_0316BBA59A1C4C23BFC3EA31A78CE913"
