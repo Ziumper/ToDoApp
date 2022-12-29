@@ -2,6 +2,7 @@ using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
 using System;
+using System.Diagnostics;
 using ToDoApp.Wpf.Services;
 using ToDoApp.Wpf.ViewModels;
 using ToDoApp.Wpf.Views;
@@ -19,7 +20,7 @@ namespace ToDoApp.Wpf
         {
             if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
             {
-                Database database = new Database();
+                Database database = new ();
                 desktop.MainWindow = new MainWindow
                 {
                     DataContext = new MainWindowViewModel(database),
@@ -33,17 +34,11 @@ namespace ToDoApp.Wpf
 
         private void OnExit(object? sender, ControlledApplicationLifetimeExitEventArgs e)
         {
-            if(sender is not IClassicDesktopStyleApplicationLifetime desktop)
-            {
-                return;
-            }
-
-            if (desktop.MainWindow == null) return;
-
+            if(sender is not IClassicDesktopStyleApplicationLifetime desktop) return;
             if (desktop.MainWindow.DataContext is not MainWindowViewModel viewModel) return;
 
-            Database database = new Database();
+            Database database = new ();
             database.Save(viewModel.List.Items);
-         }
+        }
     }
 }

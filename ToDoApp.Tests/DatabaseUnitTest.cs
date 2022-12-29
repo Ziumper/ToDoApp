@@ -26,46 +26,74 @@ namespace ToDoApp.Tests
         [Fact]
         public void IsSavedTodoItemsEqualToLoaded()
         {
-            Database database = new ();
-            IEnumerable<TodoItem> items = database.GetItems();
+            IEnumerable<TodoItem> items = SaveTodoItems();
 
-            List<TodoItem> todoItems = items.ToList();
-            TodoItem item = new()
-            {
-                Description = "description",
-                IsChecked = true,
-            };
-           
-            todoItems.Add(item);
-            database.Save(todoItems);
+            Database database = new ();
             IEnumerable<TodoItem> loadedItems = database.Load();
 
-            Assert.Equal(loadedItems.Count(),todoItems.Count);
+            Assert.Equal(loadedItems.Count(), items.Count());
+            database.DeleteAll();
         }
 
         [Fact]
         public void DeletedAllTodoItemsAfterSaving()
         {
-
             Database database = new();
-            IEnumerable<TodoItem> items = database.GetItems();
-
-            List<TodoItem> todoItems = items.ToList();
-            TodoItem item = new()
-            {
-                Description = "description",
-                IsChecked = true,
-            };
-
-            todoItems.Add(item);
-            database.Save(todoItems);
+            SaveTodoItems();
             database.DeleteAll();
 
             IEnumerable<TodoItem> loadedItems = database.Load();
             Assert.Empty(loadedItems);
         }
 
+        [Fact]
+        public void CanCreateDirectoryWhenSave()
+        {
+            Database database = new();
 
-       
+            if (Directory.Exists(database.DirectoriesPath))
+            {
+                DeleteFiles();      
+            }
+
+            SaveTodoItems();
+            
+            Assert.True(Directory.Exists(database.DirectoriesPath));
+            database.DeleteAll();
+        }
+
+        [Fact]
+        public void IsTheNameOfSavedFileIsCorrectInPath()
+        {
+            Database database = new();
+            string fileName = database.DataPath.Split(Path.DirectorySeparatorChar).Last();
+            Assert.Equal(Database.FileName, fileName);
+        }
+
+
+        private static IEnumerable<TodoItem> SaveTodoItems()
+        {
+            Database database = new();
+            
+            List<TodoItem> todoItems = new ();
+            TodoItem item = new()
+            {
+                Description = "description",
+                IsChecked = true,
+            };
+
+            todoItems.Add(item);
+            database.Save(todoItems);
+
+            return todoItems;
+        }
+
+        private static void DeleteFiles()
+        {
+            Database database = new ();
+            database.DeleteAll();
+            Directory.Delete(database.DirectoriesPath);
+        }
+
     }
 }
