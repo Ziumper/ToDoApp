@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Avalonia.Controls;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text.Json;
@@ -56,6 +57,16 @@ namespace ToDoApp.Wpf.Services
         public void DeleteAll()
         {
             if (File.Exists(dataPath)) File.Delete(dataPath);
+        }
+
+        public void Delete(IEnumerable<TodoItem> items)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Delete(TodoItem item)
+        {
+            throw new NotImplementedException();
         }
 
         public IEnumerable<TodoItem> GetItems() => Load();

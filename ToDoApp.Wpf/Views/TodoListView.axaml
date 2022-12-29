@@ -8,14 +8,14 @@
 		<Button DockPanel.Dock="Bottom"
 				HorizontalAlignment="Stretch"
 				HorizontalContentAlignment="Center"
-				Command="{Binding $parent[Window].DataContext.DeleteAll}">
-			Delete all items
+				Command="{Binding $parent[Window].DataContext.ClearCompleted}">
+			Clear completed
 		</Button>
 		<Button DockPanel.Dock="Bottom"
 				HorizontalAlignment="Stretch"
 				HorizontalContentAlignment="Center"
 				Command="{Binding $parent[Window].DataContext.AddItem}">
-			Add an item
+			Add new
 		</Button>
 		<ScrollViewer>
 			<ItemsControl Items="{Binding Items}">

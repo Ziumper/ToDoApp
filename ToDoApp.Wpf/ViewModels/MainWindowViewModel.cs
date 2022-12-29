@@ -1,6 +1,9 @@
 using Avalonia.Controls;
 using ReactiveUI;
 using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 using System.Reactive.Linq;
 using ToDoApp.Wpf.Models;
 using ToDoApp.Wpf.Services;
@@ -10,7 +13,7 @@ namespace ToDoApp.Wpf.ViewModels
     public class MainWindowViewModel : ViewModelBase
     {
         private ViewModelBase? content;
-        private Database database;
+        private readonly Database database;
 
         public MainWindowViewModel(Database database)
         {
@@ -47,9 +50,13 @@ namespace ToDoApp.Wpf.ViewModels
             Content = vm;
         }
 
-        public void DeleteAll()
+        public void ClearCompleted()
         {
+            List<TodoItem> list = List.Items.Where((TodoItem todo) => todo.IsChecked == false).ToList();
+            
             database.DeleteAll();
+            database.Save(list);
+            
             Content = List = new TodoListViewModel(database.GetItems());
         }
     }
