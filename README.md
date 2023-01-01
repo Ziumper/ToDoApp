@@ -4,4 +4,4 @@ Simple wpf todo application with usage [AvaloniaUI](https://avaloniaui.net/) fra
 
 [![TodoAppView](images/app_view.png)]
 
-Download installer [here](release/ToDoApp.Installer.msi)
+Download installer [here](https://github.com/Ziumper/ToDoApp/blob/master/Download/ToDoApp.Installer.msi)
