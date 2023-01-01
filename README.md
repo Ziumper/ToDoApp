@@ -1,5 +1,7 @@
 # ToDoApp
 
-Simple wpf todo application with usage [AvaloniaUI](https://avaloniaui.net/) framework
+Simple wpf todo application with usage [AvaloniaUI](https://avaloniaui.net/) framework and .Net core
 
 [![TodoAppView](images/app_view.png)]
+
+Download installer [here](release/ToDoApp.Installer.msi)
