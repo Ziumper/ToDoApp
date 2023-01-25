@@ -198,15 +198,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:ToDoApp"
-        "ProductCode" = "8:{68786147-CD4C-4E2E-8D0D-B215FF0295E3}"
-        "PackageCode" = "8:{B77687EC-E7FC-45B6-B5D6-E4C1458B5A20}"
+        "ProductCode" = "8:{6C6C7F15-BCBE-454C-8981-B0B0DDFB80DB}"
+        "PackageCode" = "8:{A8A3CCF4-B275-4FDB-8E18-1B51A1399DC7}"
         "UpgradeCode" = "8:{928988EF-0B8D-4FB7-BEC5-5EE2B3D47937}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.0.2"
+        "ProductVersion" = "8:0.0.1"
         "Manufacturer" = "8:Ziumper"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
@@ -762,7 +762,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_52CD0BAB9BF8465BB4D2F73C71A243BA"
             {
-            "SourcePath" = "8:..\\ToDoApp.Wpf\\obj\\Release\\net7.0\\apphost.exe"
+            "SourcePath" = "8:..\\ToDoApp.Wpf\\obj\\Release\\net6.0\\apphost.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_0316BBA59A1C4C23BFC3EA31A78CE913"
